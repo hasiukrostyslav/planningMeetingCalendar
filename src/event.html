@@ -6,5 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create event</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container container--small">
+      <form class="form">
+        <div class="form__inputs">
+          <div class="form__item">
+            <label class="form__label" for="event">Name of the event:</label>
+            <input class="form__input" type="text" id="event" />
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="members">Participants:</label>
+            <div class="select select--large">
+              <select
+                class="form__input form__select"
+                name="members-add"
+                id="members-add"
+              >
+                <option value="all">All members</option>
+                <option value="kateryna">Kateryna</option>
+                <option value="iryna">Iryna</option>
+                <option value="rostyslav">Rostyslav</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="day">Day:</label>
+            <div class="select select--large">
+              <select class="form__input form__select" name="day" id="day">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="time">Time:</label>
+            <div class="select select--large">
+              <select class="form__input form__select" name="time" id="time">
+                <option value="10">10:00</option>
+                <option value="11">11:00</option>
+                <option value="12">12:00</option>
+                <option value="13">13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__btns">
+          <a href="index.html" class="btn btn--submit">Cancel</a>
+          <button type="reset" class="btn btn--submit">Create</button>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>

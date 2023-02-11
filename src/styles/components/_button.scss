@@ -1,0 +1,30 @@
+.btn {
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  cursor: pointer;
+  @include border;
+  background-color: $color-secondary;
+  transition: all 0.5s;
+  text-align: center;
+
+  &:link,
+  &:visited {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $color-third;
+  }
+
+  &--modal {
+    background-color: $color-white;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  &--submit {
+    width: 100%;
+  }
+}

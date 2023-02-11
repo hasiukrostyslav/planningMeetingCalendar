@@ -1,0 +1,102 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 1rem;
+
+  &__inputs {
+    flex-basis: 60%;
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    display: inline-block;
+    width: 15rem;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding: 1rem 1.4rem;
+    border: 1px solid $color-third;
+    border-radius: 4px;
+    width: 23.2rem;
+  }
+
+  &__sort {
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border: 1px solid $color-third;
+    border-radius: 4px;
+  }
+
+  &__btns {
+    margin-left: auto;
+    width: 25rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  flex: 1;
+  cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.select {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.25rem;
+
+  &--small {
+    width: 20rem;
+    height: 3.2rem;
+
+    &::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 1rem;
+      border-left: 1px solid $color-third;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+  &--large {
+    width: 23.2rem;
+    height: 3.9rem;
+
+    &::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 9px 1rem;
+      border-left: 1px solid $color-third;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+}

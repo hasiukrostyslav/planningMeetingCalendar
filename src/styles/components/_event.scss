@@ -1,0 +1,32 @@
+.event {
+  display: flex;
+  justify-content: space-between;
+
+  &__delete {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 47%;
+      right: -1px;
+      width: 10px;
+      height: 2px;
+      background-color: $color-third;
+      transform: rotate(45deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: -5px;
+      width: 2px;
+      height: 10px;
+      background-color: $color-third;
+      transform: rotate(45deg);
+    }
+  }
+}

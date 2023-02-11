@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  width: 90rem;
+  margin: 10rem auto;
+  padding: 2rem;
+  @include border;
+
+  &--small {
+    width: 70rem;
+  }
+}
+
+.hidden {
+  display: none;
+}

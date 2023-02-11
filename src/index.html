@@ -6,5 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <nav class="navigation">
+        <h1 class="heading">Calendar</h1>
+        <form class="navigation__form">
+          <div class="select select--small">
+            <select
+              class="form__sort form__select"
+              name="members-sort"
+              id="members-sort"
+            >
+              <option value="all">All members</option>
+              <option value="kateryna">Kateryna</option>
+              <option value="iryna">Iryna</option>
+              <option value="rostyslav">Rostyslav</option>
+            </select>
+          </div>
+          <a href="event.html" class="btn">New event +</a>
+        </form>
+      </nav>
+      <table class="table">
+        <thead class="table__head">
+          <tr class="table__row">
+            <th class="table__heading">Time</th>
+            <th class="table__heading">Mon</th>
+            <th class="table__heading">Tue</th>
+            <th class="table__heading">Wed</th>
+            <th class="table__heading">Thu</th>
+            <th class="table__heading">Fri</th>
+          </tr>
+        </thead>
+        <tbody class="table__body">
+          <tr class="table__row">
+            <td class="table__data table__data--time">10:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">11:00</td>
+            <td class="table__data table__data--event">
+              <p class="event">
+                <span class="event__title">Daily Standup</span>
+                <button class="event__delete"></button>
+              </p>
+            </td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">12:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">13:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data table__data--event">
+              <p class="event">
+                <span class="event__title">Planning session</span>
+                <button class="event__delete"></button>
+              </p>
+            </td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">14:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">15:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">16:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">17:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data table__data--event">
+              <p class="event">
+                <span class="event__title">Retrospective</span>
+                <button class="event__delete"></button>
+              </p>
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--time">18:00</td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="modal hidden">
+        <p class="modal__text">
+          Are you sure you want to delete "Retrospective" event?
+        </p>
+        <div class="modal__btns">
+          <button class="btn btn--modal">No</button>
+          <button class="btn btn--modal">Yes</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
