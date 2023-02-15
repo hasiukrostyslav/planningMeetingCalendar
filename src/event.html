@@ -11,8 +11,10 @@
       <form class="form">
         <div class="form__inputs">
           <div class="form__item">
-            <label class="form__label" for="event">Name of the event:</label>
-            <input class="form__input" type="text" id="event" />
+            <label class="form__label" for="event-title"
+              >Name of the event:</label
+            >
+            <input class="form__input" type="text" id="event-title" />
           </div>
           <div class="form__item">
             <label class="form__label" for="members">Participants:</label>
@@ -22,8 +24,11 @@
                 name="members-add"
                 id="members-add"
               >
-                <option value="all">All members</option>
+                <option value="kateryna, iryna, rostyslav">All members</option>
+                <option value="kateryna, iryna">Kateryna, Iryna</option>
+                <option value="kateryna, rostyslav">Kateryna, Rostyslav</option>
                 <option value="kateryna">Kateryna</option>
+                <option value="iryna, rostyslav">Iryna, Rostyslav</option>
                 <option value="iryna">Iryna</option>
                 <option value="rostyslav">Rostyslav</option>
               </select>
@@ -60,8 +65,8 @@
         </div>
 
         <div class="form__btns">
-          <a href="index.html" class="btn btn--submit">Cancel</a>
-          <button type="reset" class="btn btn--submit">Create</button>
+          <a href="index.html" class="btn btn--cancel">Cancel</a>
+          <button type="submit" class="btn btn--submit">Create</button>
         </div>
       </form>
     </main>

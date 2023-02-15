@@ -23,3 +23,48 @@
     gap: 1rem;
   }
 }
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 3rem 1rem 2rem;
+  background-color: rgba($color-red, $alpha: 0.2);
+
+  &__message {
+    color: $color-red;
+    font-size: 1.4rem;
+  }
+
+  &__close {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: -2px;
+      width: 14px;
+      height: 2px;
+      background-color: $color-red;
+      transform: rotate(45deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -6px;
+      width: 2px;
+      height: 14px;
+      background-color: $color-red;
+      transform: rotate(45deg);
+    }
+  }
+}

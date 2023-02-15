@@ -2,7 +2,7 @@
   "name": "planningmeetingcalendar",
   "version": "1.0.0",
   "description": "Planning Meeting Calendar app",
-  "main": "index.js",
+  "main": "controller.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack server",

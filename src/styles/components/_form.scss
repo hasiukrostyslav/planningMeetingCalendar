@@ -82,6 +82,7 @@ select {
       border-left: 1px solid $color-third;
       cursor: pointer;
       pointer-events: none;
+      background-color: $color-secondary;
     }
   }
   &--large {
@@ -97,6 +98,7 @@ select {
       border-left: 1px solid $color-third;
       cursor: pointer;
       pointer-events: none;
+      background-color: $color-secondary;
     }
   }
 }
