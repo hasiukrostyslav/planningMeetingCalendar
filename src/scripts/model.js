@@ -29,8 +29,8 @@ export function createEventObject(data) {
 }
 
 export function removeEventObject(cell) {
+  console.log(cell);
   if (!cell) return;
-
   const index = state.events.indexOf(
     state.events.find(
       (el) => el.time === cell.dataset.time && el.day === cell.dataset.day

@@ -25,11 +25,11 @@ export default class View {
     return `
       <div class="modal">
         <p class="modal__text">
-          Are you sure you want to delete "${title}" event?
+          Are you sure you want to delete event?
         </p>
         <div class="modal__btns">
-          <button class="btn btn--modal">No</button>
-          <button class="btn btn--modal">Yes</button>
+          <button class="btn btn--modal btn--cancel">No</button>
+          <button class="btn btn--modal btn--delete">Yes</button>
         </div>
       </div>
     `;

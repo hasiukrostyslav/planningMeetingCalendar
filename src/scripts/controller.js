@@ -38,3 +38,5 @@ function init() {
 }
 
 init();
+
+console.log(model.state.events);

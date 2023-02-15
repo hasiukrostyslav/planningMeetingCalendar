@@ -2,12 +2,15 @@ import View from './View';
 import { HOURS, DAYS } from '../config';
 
 class CalendarView extends View {
+  _parentElement = document.querySelector('.table');
   _tableRows = document.querySelectorAll('.table__row');
   _tableCell = document.querySelectorAll('.table__cell');
   _hours = document.querySelectorAll('.table__data--time');
   _btnDeleteEvent = document.querySelector('.event__delete');
   _btnFilter = document.getElementById('members-sort');
   currentCell;
+  _btnDelSubmit;
+  _btnDelCancel;
 
   constructor() {
     super();
@@ -19,18 +22,40 @@ class CalendarView extends View {
     return window.location.origin;
   }
 
+  _renderWarning() {
+    this._parentElement.insertAdjacentHTML(
+      'beforeend',
+      this._generateWarningMessageMarkup()
+    );
+  }
+
   deleteEventElement(e) {
     const btn = e.target.closest('.event__delete');
 
     if (!btn) return;
 
-    const cell = btn.closest('.table__cell');
-    cell.classList.remove('table__data--event');
-    cell.innerHTML = '';
-    this.currentCell = cell;
+    this._renderWarning();
+    this._modal = document.querySelector('.modal');
+
+    this._btnDelSubmit = document.querySelector('.btn--delete');
+    this._btnDelCancel = document.querySelector('.btn--cancel');
+
+    if (!this._btnDelSubmit) return;
+
+    this._btnDelSubmit.addEventListener('click', (e) => {
+      const cell = btn.closest('.table__cell');
+      cell.classList.remove('table__data--event');
+      cell.innerHTML = '';
+      this.currentCell = cell;
+      this._modal.remove();
+      console.log(this.currentCell);
+    });
+
+    this._btnDelCancel.addEventListener('click', () => this._modal.remove());
   }
 
   addHandlerDeleteEvent(handler) {
+    if (!this._parentElement) return;
     this._parentElement.addEventListener('click', handler);
   }
 
@@ -83,15 +108,13 @@ class CalendarView extends View {
         el.innerHTML = '';
       });
 
+      if (e.target.value === 'all') this._createEvent(events);
+
       const filter = events.filter(
         (el) => el.participants.join(', ') === e.target.value
       );
 
-      if (filter.length > 0) {
-        this._createEvent(filter);
-      } else {
-        this._createEvent(events);
-      }
+      this._createEvent(filter);
     });
   }
 }
