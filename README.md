@@ -24,7 +24,7 @@ Meeting calendar app for a meeting room in your office:
 To run this project, install it locally using npm:
 
 ```
-$ git https://github.com/hasiukrostyslav/planningMeetingCalendar.git
+$ git clone https://github.com/hasiukrostyslav/planningMeetingCalendar.git
 $ npm install
 $ npm run dev
 ```
